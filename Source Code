@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CsGo_Ultimate_Bravery_V1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Random rnd1 = new Random();
+
+            string[] Primary = "Ak-47 / M4a1-s / M4a4 | Famas / Galil-AR | AUG / SG-553 | AWP | SCAR-20 / G3SG1 | MP9 / Mac-10 | MP7 | SSG-08 | P90 | PP-Bizon | M249 | Negev | Nova | XM1024 | Mag-7 / Sawed-Off | No Primary  ".Split('|');
+            string rndpick = Primary[rnd1.Next(Primary.Length)];
+            string printPrimary = rndpick;
+            lblPrimary.Text = printPrimary;
+
+            string[] Secondary = "P2000 / Usp-s / Glock-18 | Five-Seven / Tec-9 / Cz-75 | P250 | Dual-Berettas | Desert Eagle | No Secondary  ".Split('|');
+            string rndpick2 = Secondary[rnd1.Next(Secondary.Length)];
+            string printSecondary = rndpick2;
+            lblSecondary.Text = printSecondary;
+
+            string[] Helmet = " Kevlar | Kevlar + Helmet | No Kevlar / Helmet".Split('|');
+            string rndpick3 = Helmet[rnd1.Next(Helmet.Length)];
+            string printHelmet = rndpick3;
+            lblKevlar.Text = printHelmet;
+
+            string[] Flashbang = " 1x Flashbang | 2x Flashbang | No Flashbang".Split('|');
+            string rndpick4 = Flashbang[rnd1.Next(Flashbang.Length)];
+            string printFlash = rndpick4;
+            lblFlash.Text = printFlash;
+
+            string[] Smoke = " 1x Smoke | No Smoke".Split('|');
+            string rndpick5 = Smoke[rnd1.Next(Smoke.Length)];
+            string printSmoke = rndpick5;
+            lblSmoke.Text = printSmoke;
+
+            string[] Molotov = " 1x Molotov | No Molotov".Split('|');
+            string rndpick6 = Molotov[rnd1.Next(Molotov.Length)];
+            string printMolotov = rndpick6;
+            lblMolotov.Text = printMolotov;
+
+            string[] Grenade = " 1x Grenade | No Grenade".Split('|');
+            string rndpick7 = Grenade[rnd1.Next(Grenade.Length)];
+            string printGrenade = rndpick7;
+            lblGrenade.Text = printGrenade;
+        }
+    }
+}
